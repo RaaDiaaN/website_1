@@ -138,3 +138,60 @@
         }
     }
 }
+
+.ar {
+    & .grid {
+        grid-template-columns: 1fr;
+
+        @include medium-up {
+            position: relative;
+            grid-template-columns: 50% 50%;
+            background: $gradient;
+            border-radius: 50px;
+            padding: 134px 55px;
+        }
+    }
+
+    & h2 {
+        width: 100%;
+        
+        @include medium-up {
+            width: 80%
+        }
+    }
+
+    & p {
+        @include paragraph;
+    }
+
+    &__text {
+        text-align: center;
+
+        @include medium-up {
+            text-align: left;
+        }
+    }
+
+    &__img  {
+        &--mobile {
+            display: inline-block;
+            justify-self: center;
+
+            @include medium-up {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include medium-up {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: -100px;
+                width: 45%;
+            }
+        }
+    }
+}
