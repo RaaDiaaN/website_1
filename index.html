@@ -5,6 +5,8 @@
     <meta name="description" content="Aplikacja na zakupy dla Rządowej Agencji Rezerw Strategicznych">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOWa</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -164,7 +166,31 @@
     </section>
 
 </main>
-    
+
+<footer class="footer">
+    <div class="container flex">
+        <div class="footer__logo">
+            <a class="footer__logo-wrapper" href="#">
+                <img src="img/doya-logo.png" alt="Doya - logo aplikacji" class="logo">
+            </a>
+            <p>ul. Przemysłowa 234, Tarnów 33-100</p>
+        </div>
+
+        <div class="footer__text">
+            <p>© Doya™, 2021. All rights reserved.</p>
+            <p> Obrazki zastosowane w projekcie są użyte jedynie w celach wizualizacyjnych.</p>
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        delay: 200,
+        duration: 1200,
+        once: false,
+        disable: 'mobile'
+    });
+  </script>
     <script src="./js/script.js"></script>
 </body>
 </html>         
