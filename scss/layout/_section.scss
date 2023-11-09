@@ -1,0 +1,140 @@
+.section {
+    padding: 65px 0 0;
+
+    @include medium-up {
+        padding: 150px 0 0;
+    }
+}
+
+.showcase {
+    overflow: hidden;
+
+    &__text {
+        text-align: center;
+        margin-top: 69px;
+
+        @include medium-up {
+            text-align: left;
+            width: 60%;
+            margin-top: 100px;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+
+            @include medium-up {
+                margin-bottom: 49px;
+            }
+        }
+
+        & p {
+            margin-bottom: 44px;
+            width: 100%;
+
+            @include paragraph;
+            @include medium-up {
+                margin-bottom: 57px;
+                width: 80%;
+            }
+        }
+    }
+
+    &__img {
+        z-index: -1;
+
+        &--desktop {
+            display: none;
+
+            @include small-up {
+                display: inline-block;
+                position: relative;
+                right: -15px;
+                margin-top: 30px;
+            }
+
+            @include medium-up {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 45%;
+                margin-top: unset;
+            }
+        }
+
+        &--mobile {
+            display: inline-block;
+            position: relative;
+            right: -15px;
+            margin-top: 60px;
+
+            @include small-up {
+                display: none;
+            }
+        }
+    }
+
+    & .flex {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+        @include medium-up {
+            flex-direction: row;
+        }
+    }
+}
+
+.application {
+    &__info {
+        font-weight: $font-weight-semibold;
+        font-size: 34px;
+        line-height: 36px;
+        margin-bottom: 75px;
+
+        @include medium-up {
+            font-size: $font-size-2;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        @include medium-up {
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        & p {
+            margin-top: 34px;
+            @include paragraph;
+        }
+    }
+
+    &__img {
+        &--desktop {
+            display: none;
+
+            @include medium-up {
+                display: inline-block;
+            }
+        }
+
+        &--mobile {
+            display: inline-block;
+            justify-self: center;
+
+            @include medium-up {
+                display: none;
+            }
+        }
+    }
+
+    & .grid {
+        grid-template-columns: 1fr;
+
+        @include medium-up {
+            grid-template-columns: 45% 55%;
+        }
+    }
+}
